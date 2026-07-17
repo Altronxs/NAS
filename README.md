@@ -1,4 +1,4 @@
-# # TrueNAS Scale Build Documentation
+# TrueNAS Scale Build Documentation
 
 ![TrueNAS SCALE](https://img.shields.io/badge/TrueNAS-SCALE%2024.10.2.4-0095D5?logo=truenas&logoColor=white)
 ![ZFS](https://img.shields.io/badge/Filesystem-ZFS-orange)
@@ -62,6 +62,11 @@ All services below run as Docker containers on TrueNAS SCALE.
 | [Jellyfin](https://jellyfin.org/) | Media streaming for family/users | 2024 | Active |
 | [Nextcloud](https://nextcloud.com/) | Auto-upload of photos from phones when on home network | 2026 | Active |
 | Minecraft Java Server | Family/friends game server | 2024 | Decommissioned — no longer running |
+| [Traefik](https://traefik.io/traefik/) | Reverse proxy for the Minecraft server | 2024 | Decommissioned — no longer running |
+
+### Networking / Security Notes
+
+To avoid exposing raw open ports directly to the internet, I experimented with Traefik as a reverse proxy in front of the Minecraft server, routing traffic through it rather than forwarding the game port straight to the home network. This was part of a broader effort to keep the home network secure while still allowing external access to self-hosted services. Since the Minecraft server has been decommissioned, this Traefik setup is no longer active.
 
 ## Notes / Future Plans
 
