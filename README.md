@@ -1,4 +1,4 @@
-# Family Photo NAS
+# # TrueNAS Scale Build Documentation
 
 ![TrueNAS SCALE](https://img.shields.io/badge/TrueNAS-SCALE%2024.10.2.4-0095D5?logo=truenas&logoColor=white)
 ![ZFS](https://img.shields.io/badge/Filesystem-ZFS-orange)
