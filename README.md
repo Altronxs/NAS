@@ -1,4 +1,4 @@
-# TrueNAS Scale Electric Eel 24.10.2.4 Build Documentation
+# Family Photo NAS
 
 ![TrueNAS SCALE](https://img.shields.io/badge/TrueNAS-SCALE%2024.10.2.4-0095D5?logo=truenas&logoColor=white)
 ![ZFS](https://img.shields.io/badge/Filesystem-ZFS-orange)
@@ -13,6 +13,7 @@ A home NAS built to give my family a reliable, central place to store our photos
 - [Why TrueNAS SCALE?](#why-truenas-scale)
 - [History / Timeline](#history--timeline)
 - [Storage Layout](#storage-layout)
+- [Services & Apps](#services--apps)
 - [Notes / Future Plans](#notes--future-plans)
 
 ## Overview
@@ -42,6 +43,8 @@ The server originally ran plain Ubuntu with a manually configured ZFS pool. That
 - **2023** — Migrated from Ubuntu to TrueNAS SCALE for a proper server UI. Upgraded the hardware at the same time: AMD Ryzen 5 3600X, 32GB DDR4 RAM, and a new NVMe SSD boot drive.
 - **2025** — As the original 3x2TB pool started filling up, began planning and acquiring a second set of drives.
 - **2025–2026** — Added a second ZFS pool: 4x2TB HDDs, single parity, to expand storage capacity.
+- **2024** — Set up Docker on TrueNAS SCALE and deployed Jellyfin for media streaming and a Minecraft Java server for family/friends (later decommissioned).
+- **2026** — Deployed Nextcloud via Docker to enable automatic photo uploads from phones while on the home network.
 
 ## Storage Layout
 
@@ -49,6 +52,16 @@ The server originally ran plain Ubuntu with a manually configured ZFS pool. That
 - **Pool 2 (2025–2026):** 4x 2TB HDD, ZFS single parity (RAIDZ1) — added to expand capacity as Pool 1 approached full.
 
 Both pools use single-parity ZFS (RAIDZ1), allowing one drive per pool to fail without data loss.
+
+## Services & Apps
+
+All services below run as Docker containers on TrueNAS SCALE.
+
+| Service | Purpose | Added | Status |
+|---|---|---|---|
+| [Jellyfin](https://jellyfin.org/) | Media streaming for family/users | 2024 | Active |
+| [Nextcloud](https://nextcloud.com/) | Auto-upload of photos from phones when on home network | 2026 | Active |
+| Minecraft Java Server | Family/friends game server | 2024 | Decommissioned — no longer running |
 
 ## Notes / Future Plans
 
